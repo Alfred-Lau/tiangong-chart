@@ -4,9 +4,11 @@
   "description": "tiangong-chart 天工体系图表库",
   "main": "index.js",
   "scripts": {
+    "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
     "lint": "eslint --fix",
     "test": "jest --coverage",
-    "test-live": "cross-env DEBUG_MODE=1 jest --coverage"
+    "test-live": "cross-env DEBUG_MODE=1 jest --coverage",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,22 @@
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
     "jest": "^24.9.0",
-    "jest-electron": "^0.1.12"
+    "jest-electron": "^0.1.12",
+    "lint-staged": "^13.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
