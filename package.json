@@ -4,6 +4,7 @@
   "description": "tiangong-chart 天工体系图表库",
   "main": "index.js",
   "scripts": {
+    "ci": "run-s lint test build",
     "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
     "lint": "eslint --fix",
     "test": "jest --coverage",
@@ -35,6 +36,7 @@
     "jest": "^24.9.0",
     "jest-electron": "^0.1.12",
     "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
     "rollup-plugin-babel": "^4.4.0",
