@@ -1,0 +1,33 @@
+{
+  "name": "tiangong-chart",
+  "version": "1.0.0",
+  "description": "tiangong-chart 天工体系图表库",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix",
+    "test": "jest --coverage",
+    "test-live": "cross-env DEBUG_MODE=1 jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alfred-Lau/tiangong-chart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alfred-Lau/tiangong-chart/issues"
+  },
+  "homepage": "https://github.com/Alfred-Lau/tiangong-chart#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^24.9.0",
+    "jest-electron": "^0.1.12"
+  }
+}
